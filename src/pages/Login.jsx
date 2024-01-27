@@ -26,15 +26,15 @@ const Login = () => {
           src="https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg"
           alt="background image"
         />
-        <div className="bg-black/60 fixed top-0 left-0 w-full h-screen"></div>
+        <div className="bg-black/50 fixed top-0 left-0 w-full h-screen"></div>
         <div className="fixed w-full px-4 py-24 z-50 ">
-          <div className="max-w[450px] h-[600px] mx-auto bg-black/75 ">
-            <div className="max-w-[320px] mx-auto py-16 ">
+          <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 rounded-md ">
+            <div className="max-w-[320px] mx-auto py-16">
               <h1 className="text-3xl font-bold  ">Sign In</h1>
 
               <form
                 onSubmit={handleSubmit}
-                className="w-full flex flex-col py-4 ">
+                className="w-[300px] mx-auto flex flex-col py-4 ">
                 <input
                   className="p-3 my-2 bg-gray-700 rounded-md"
                   type="email"
@@ -51,9 +51,7 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                 />
-                <button className="bg-red-600 py-3 my-6 rounded-md font-bold ">
-                  Sign In
-                </button>
+                <button className="btn-red ">Sign In</button>
 
                 <div className="flex justify-between items-center text-sm text-gray-600">
                   <p>
@@ -64,8 +62,10 @@ const Login = () => {
                 </div>
 
                 <p className="py-4">
-                  <span className="text-gray-600">New to Netflix </span>
-                  <Link to="/signup">Sign Up</Link>
+                  <span className="text-gray-600">New to Netflix? </span>
+                  <Link to="/signup" className="hover:underline">
+                    Sign Up
+                  </Link>
                 </p>
               </form>
             </div>
