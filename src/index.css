@@ -7,3 +7,13 @@ body {
   font-family: sans-serif;
   color: white;
 }
+
+@layer utilities {
+  .btn-red {
+    @apply bg-netflixred py-3 my-6 rounded-md font-bold;
+  }
+
+  .subscribe__btn {
+    @apply bg-netflixred font-bold p-3 rounded-md;
+  }
+}
