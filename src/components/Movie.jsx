@@ -3,6 +3,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import defaultImg from "../public/assets/thumbnail.jpg";
 
 const Movie = ({ movie }) => {
   const [like, setLike] = useState(false);
