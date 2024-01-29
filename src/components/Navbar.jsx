@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="text-white flex items-center justify-between p-4 z-[100] w-full absolute lg:px-10">
-      <Link to="/">
+      <Link to={user ? "/showcase" : "/"}>
         <img src={netflix} alt="logo" className="w-[6rem] md:w-36" />
       </Link>
       {user?.email ? (
@@ -36,11 +36,8 @@ const Navbar = () => {
       ) : (
         <div>
           <Link to="/login">
-            <button className="text-white pr-4"> Sign In</button>
-          </Link>
-          <Link to="signup">
-            <button className="bg-netflixred px-3 py-1 md:px-6 md:py-2 rounded-md">
-              Sign Up
+            <button className="bg-netflixred text-white px-3 md:px-5 py-2 rounded-md font-bold ">
+              Sign In
             </button>
           </Link>
         </div>
