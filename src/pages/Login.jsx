@@ -13,21 +13,21 @@ const Login = () => {
 
     try {
       await logIn(email, password);
-      navigate("/");
+      navigate("/showcase");
     } catch (error) {
       console.log(error);
     }
   };
   return (
     <>
-      <div className="w-full h-screen">
+      <section className="w-full">
         <img
-          className="hidden sm:block absolute w-full h-full object-cover"
+          className=" sm:block absolute w-full h-full object-cover"
           src="https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg"
           alt="background image"
         />
-        <div className="bg-black/50 fixed top-0 left-0 w-full h-screen"></div>
-        <div className="fixed w-full px-4 py-24 z-50 ">
+        <div className="bg-black/65 fixed top-0 left-0 w-full h-screen"></div>
+        <div className="fixed w-full px-4 py-24 z-50">
           <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 rounded-md ">
             <div className="max-w-[320px] mx-auto py-16">
               <h1 className="text-3xl font-bold  ">Sign In</h1>
@@ -71,7 +71,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
