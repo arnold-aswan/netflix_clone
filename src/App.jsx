@@ -9,6 +9,9 @@ import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Showcase from "./pages/Showcase";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <>
@@ -43,6 +46,7 @@ function App() {
             }
           />
         </Routes>
+        <ToastContainer />
       </AuthContextProvider>
     </>
   );
