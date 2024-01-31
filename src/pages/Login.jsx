@@ -5,7 +5,7 @@ import { UserAuth } from "../context/AuthContext";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, logIn } = UserAuth();
+  const { logIn, anonymousLogin } = UserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -18,6 +18,17 @@ const Login = () => {
       console.log(error);
     }
   };
+
+  const loginAnonymously = async (e) => {
+    e.preventDefault();
+    try {
+      await anonymousLogin();
+      navigate("/showcase");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <section className="w-full">
@@ -51,7 +62,17 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                 />
-                <button className="btn-red ">Sign In</button>
+                <button
+                  className="btn-red "
+                  // onClick={handleSubmit}
+                >
+                  Sign In
+                </button>
+                <button
+                  className="bg-white text-black font-bold py-3 mb-5 rounded-md"
+                  onClick={loginAnonymously}>
+                  Login as Guest
+                </button>
 
                 <div className="flex justify-between items-center text-sm text-gray-600">
                   <p>
