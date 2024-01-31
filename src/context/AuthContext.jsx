@@ -4,6 +4,7 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInAnonymously,
   onAuthStateChanged,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
@@ -29,6 +30,14 @@ export const AuthContextProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const anonymousLogin = async () => {
+    try {
+      await signInAnonymously(auth);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const logOut = () => {
     return signOut(auth);
   };
@@ -41,7 +50,8 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ signUp, user, logIn, logOut }}>
+    <AuthContext.Provider
+      value={{ signUp, user, logIn, logOut, anonymousLogin }}>
       {children}
     </AuthContext.Provider>
   );
