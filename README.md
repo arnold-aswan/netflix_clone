@@ -4,6 +4,8 @@ This application is (a Netflix clone) was built using React (Custom Hooks, Conte
 
 ![Screenshot from 2024-01-29 15-47-51](https://github.com/arnold-aswan/netflix_clone/assets/135007872/3034697e-848e-4b91-bec4-934764f4bc6c)
 
+![Screenshot from 2024-02-02 12-17-42](https://github.com/arnold-aswan/netflix_clone/assets/135007872/316ee0c7-c623-48d3-ad8b-5e0584d2e23f)
+
 ## Features
 
 1.  Sign up & Login Authentication. <br/>
@@ -11,13 +13,13 @@ This application is (a Netflix clone) was built using React (Custom Hooks, Conte
     The app uses google level authentication so their details are guarantee to be secured.
 2.  Saved Shows. <br/>
     Authenticated users can save their favorite shows and movies, which will be found in `My List`
+3.  Anonymous Login as a guest user. <br/>
+    New users can log in anonymously and test out the application before signing up.
+4.  A clickable modal that will display film description and extra information.
 
 ## Future Enhancements
 
-1. Sign up & Sign In with Google.
-2. Anonymous Login as a guest user.
-3. Implement Subscription service with Stripe.
-4. A clickable modal that will display film description and extra information.
+1. Implement Subscription service with Stripe.
 
 ## Technologies Used
 
